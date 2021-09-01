@@ -1,0 +1,4 @@
+@function lineHeight($font-size: 1rem) {
+  $lineHeight: $font-size + 1rem;
+  @return $lineHeight;
+}
