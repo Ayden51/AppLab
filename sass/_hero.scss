@@ -85,15 +85,15 @@
       z-index: -2;
     }
     &--cover {
-      width: 50%;
+      width: 40%;
       top: 50%;
-      transform: translate(1%, -65%);
+      transform: translate(1%, -70%);
     }
     &--float {
       width: 60%;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-45%, -55%);
     }
   }
 }

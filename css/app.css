@@ -230,15 +230,15 @@ main {
   z-index: -2;
 }
 .hero-decor__img--cover {
-  width: 50%;
+  width: 40%;
   top: 50%;
-  transform: translate(1%, -65%);
+  transform: translate(1%, -70%);
 }
 .hero-decor__img--float {
   width: 60%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-45%, -55%);
 }
 
 /*# sourceMappingURL=app.css.map */
