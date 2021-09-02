@@ -15,11 +15,14 @@ body {
   margin: 0 auto;
 }
 
+main {
+  position: relative;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  position: relative;
 }
 
 .btn {
@@ -38,28 +41,25 @@ body {
   color: white;
   z-index: 1;
   transition: all 0.2s ease-in-out;
-}
-
-.btn-primary:hover {
-  color: $main-text-color;
-}
-
-.btn-primary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: white;
-  border-radius: inherit;
-  border: 3px solid $primary-color;
-  z-index: -1;
-  transition: all 0.2s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: center;
-}
-
-.btn-primary:hover::before {
-  transform: scaleX(1);
+  &:hover {
+    color: $main-text-color;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: inherit;
+    border: 3px solid $primary-color;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
 }

@@ -1,59 +1,41 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin: 3rem 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &__logo {
     font-size: 3rem;
     font-weight: 700;
     color: $main-text-color;
-  }
-
-  &__logo span:first-of-type {
-    color: $logo-color;
+    span:first-of-type {
+      color: $logo-color;
+    }
   }
 
   &__nav {
     display: flex;
     align-items: center;
     color: $main-text-color;
-  }
+    ul {
+      display: flex;
+      align-items: center;
+      @include text-formatting(false, 1.6rem);
+    }
+    li {
+      margin-right: 3.7rem;
+      position: relative;
+      transition: color 0.2s linear;
+      @include link-hover($main-text-color);
+      &:hover {
+        color: $main-text-color;
+      }
+    }
 
-  &__nav ul {
-    display: flex;
-    align-items: center;
-    @include text-formatting(false, 1.6rem);
-  }
-
-  &__nav li {
-    margin-right: 3.7rem;
-    position: relative;
-    transition: color 0.2s linear;
-  }
-
-  &__nav li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.1rem;
-    right: 0;
-    height: 0.15rem;
-    background-color: $main-text-color;
-    transition: transform 0.2s linear;
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-
-  &__nav li:hover {
-    color: $main-text-color;
-  }
-
-  &__nav li:hover a::after {
-    transform: scaleX(1);
-  }
-
-  &__nav .btn {
-    margin-left: 2rem;
+    &__nav .btn {
+      margin-left: 2rem;
+    }
   }
 }
