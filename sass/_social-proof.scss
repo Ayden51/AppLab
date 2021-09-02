@@ -1,0 +1,20 @@
+.social-proof {
+  margin-top: 11.5rem;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__text {
+    @include text-formatting(false, 1.6rem);
+    margin-bottom: 3rem;
+  }
+  &__img {
+    max-width: 934px;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

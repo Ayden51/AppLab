@@ -121,8 +121,10 @@ main {
 }
 
 .hero {
-  position: relative;
-  padding-left: 7rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   z-index: 1;
 }
 .hero .container {
@@ -131,7 +133,8 @@ main {
   justify-content: space-between;
 }
 .hero__content {
-  max-width: 48%;
+  padding-left: 7rem;
+  width: 48%;
 }
 .hero__badge {
   max-width: 362px;
@@ -210,7 +213,7 @@ main {
 }
 
 .hero-decor {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -240,6 +243,30 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-45%, -55%);
+}
+
+.social-proof {
+  margin-top: 11.5rem;
+}
+.social-proof .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.social-proof__text {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  color: #616368;
+  margin-bottom: 3rem;
+}
+.social-proof__img {
+  max-width: 934px;
+}
+.social-proof__img img {
+  height: auto;
+  width: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */

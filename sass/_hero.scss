@@ -1,6 +1,8 @@
 .hero {
-  position: relative;
-  padding-left: 7rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   z-index: 1;
   .container {
     display: flex;
@@ -8,7 +10,8 @@
     justify-content: space-between;
   }
   &__content {
-    max-width: 48%;
+    padding-left: 7rem;
+    width: 48%;
   }
   &__badge {
     max-width: 362px;
@@ -67,7 +70,7 @@
 }
 
 .hero-decor {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
