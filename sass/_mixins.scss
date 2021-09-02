@@ -3,3 +3,15 @@
     @content;
   }
 }
+
+@mixin text-formatting($title: false, $fontSize) {
+  font-size: $fontSize;
+  line-height: lineHeight($fontSize);
+  @if $title {
+    font-weight: 600;
+    color: $main-text-color;
+  } @else {
+    font-weight: 400;
+    color: $secondary-text-color;
+  }
+}
