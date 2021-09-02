@@ -19,6 +19,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 
 .btn {
@@ -29,18 +30,39 @@ body {
 }
 
 .btn-primary {
+  position: relative;
   background: #2500f9;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1;
   color: white;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: #242f51;
+  z-index: -1;
+  transition: transform 0.2s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.btn-primary:hover::before {
+  transform: scaleX(1);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 .header__logo {
   font-size: 3rem;
@@ -65,6 +87,26 @@ body {
 }
 .header__nav li {
   margin-right: 3.7rem;
+  position: relative;
+  transition: color 0.2s linear;
+}
+.header__nav li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  right: 0;
+  height: 0.15rem;
+  background-color: #242f51;
+  transition: transform 0.2s linear;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.header__nav li:hover {
+  color: #242f51;
+}
+.header__nav li:hover a::after {
+  transform: scaleX(1);
 }
 .header__nav .btn {
   margin-left: 2rem;

@@ -19,6 +19,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 
 .btn {
@@ -29,9 +30,30 @@ body {
 }
 
 .btn-primary {
+  position: relative;
   background: $primary-color;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1;
   color: white;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: $main-text-color;
+  z-index: -1;
+  transition: transform 0.2s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.btn-primary:hover::before {
+  transform: scaleX(1);
 }

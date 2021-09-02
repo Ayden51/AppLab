@@ -4,7 +4,7 @@
   }
 }
 
-@mixin text-formatting($title: false, $fontSize) {
+@mixin text-formatting($title: false, $fontSize: 1.6rem) {
   font-size: $fontSize;
   line-height: lineHeight($fontSize);
   @if $title {
