@@ -46,10 +46,12 @@
 
   &__cta-demo {
     position: relative;
-    @include text-formatting(false, 1.6rem);
-    color: $primary-color;
     margin-left: 2.5rem;
-    @include link-hover(currentColor);
+    @include link-hover(currentColor, -0.5rem);
+    a {
+      @include text-formatting(false, 1.6rem);
+      color: $primary-color;
+    }
   }
 
   &__img {

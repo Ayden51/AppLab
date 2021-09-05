@@ -28,7 +28,7 @@
       margin-right: 3.7rem;
       position: relative;
       transition: color 0.2s linear;
-      @include link-hover($main-text-color);
+      @include link-hover($main-text-color, -0.1rem);
       &:hover {
         color: $main-text-color;
       }

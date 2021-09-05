@@ -16,11 +16,11 @@
   }
 }
 
-@mixin link-hover($color) {
+@mixin link-hover($color, $bottom) {
   a::after {
     content: "";
     position: absolute;
-    bottom: -0.1rem;
+    bottom: $bottom;
     left: 0;
     right: 0;
     height: 0.15rem;
@@ -29,7 +29,8 @@
     transform: scaleX(0);
     transform-origin: left;
   }
-  a:hover::after {
+  a:hover::after,
+  a:focus::after {
     transform: scaleX(1);
   }
 }

@@ -110,7 +110,8 @@ main {
   transform: scaleX(0);
   transform-origin: left;
 }
-.header__nav li a:hover::after {
+.header__nav li a:hover::after,
+.header__nav li a:focus::after {
   transform: scaleX(1);
 }
 .header__nav li:hover {
@@ -174,17 +175,12 @@ main {
 }
 .hero__cta-demo {
   position: relative;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  font-weight: 400;
-  color: #616368;
-  color: #2500f9;
   margin-left: 2.5rem;
 }
 .hero__cta-demo a::after {
   content: "";
   position: absolute;
-  bottom: -0.1rem;
+  bottom: -0.5rem;
   left: 0;
   right: 0;
   height: 0.15rem;
@@ -193,8 +189,16 @@ main {
   transform: scaleX(0);
   transform-origin: left;
 }
-.hero__cta-demo a:hover::after {
+.hero__cta-demo a:hover::after,
+.hero__cta-demo a:focus::after {
   transform: scaleX(1);
+}
+.hero__cta-demo a {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  color: #616368;
+  color: #2500f9;
 }
 .hero__img {
   position: relative;
